@@ -57,7 +57,9 @@ window.addEventListener("load", () => {
   
   tarihInput.valueAsDate = new Date();
   // Degisen bilgileri hesapla ve DOM'a bas
-  hesaplaVeGuncelle();
+  if (kalanTd.innerText !== 0 && harcamaListesi.length !== 0) {
+    hesaplaVeGuncelle();
+  }
 });
 
 //? harcama formu submit edildiginde calisir
